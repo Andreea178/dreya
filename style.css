@@ -1,0 +1,430 @@
+/* =========================
+   DREYA — PRIVATE TRAVEL PLANNING
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #F6F3EC;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* NAVIGATION */
+
+.navbar {
+    width: 100%;
+    padding: 28px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    letter-spacing: 7px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #A9AAA6;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #81D8D0;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    border: 1px solid rgba(129,216,208,0.18);
+    border-radius: 50%;
+    right: -120px;
+    top: 40px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+}
+
+.eyebrow {
+    color: #81D8D0;
+    font-size: 11px;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(60px, 9vw, 130px);
+    line-height: 0.9;
+    font-weight: 400;
+    letter-spacing: -4px;
+}
+
+.hero h1 span,
+h2 span {
+    color: #81D8D0;
+    font-style: italic;
+}
+
+.hero-text {
+    max-width: 520px;
+    color: #A9AAA6;
+    font-size: 17px;
+    margin: 40px 0;
+}
+
+
+/* BUTTON */
+
+.button {
+    display: inline-block;
+    padding: 15px 28px;
+    border: 1px solid #81D8D0;
+    color: #81D8D0;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #81D8D0;
+    color: #080808;
+}
+
+
+/* INTRO */
+
+.intro {
+    padding: 140px 10%;
+    max-width: 1100px;
+}
+
+.intro h2,
+.section-heading h2,
+.travel-books h2,
+.how h2,
+.final-cta h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(45px, 6vw, 85px);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.intro > p:last-child {
+    max-width: 620px;
+    color: #A9AAA6;
+    margin-top: 35px;
+    font-size: 17px;
+}
+
+
+/* BENEFITS */
+
+.benefits {
+    padding: 70px 10% 140px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+
+.benefits div {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 25px;
+}
+
+.benefits span {
+    color: #81D8D0;
+    font-size: 11px;
+}
+
+.benefits h3 {
+    margin: 18px 0;
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+
+.benefits p {
+    color: #A9AAA6;
+}
+
+
+/* SERVICES */
+
+.services {
+    padding: 130px 7%;
+    background: #0D0D0D;
+}
+
+.section-heading {
+    margin-bottom: 80px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.service-card {
+    min-height: 390px;
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 35px 28px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.4s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: #81D8D0;
+}
+
+.service-card > p:first-child {
+    color: #81D8D0;
+    font-size: 11px;
+}
+
+.service-card h3 {
+    font-family: Georgia, serif;
+    font-size: 31px;
+    font-weight: 400;
+    margin-top: 35px;
+}
+
+.service-card strong {
+    color: #81D8D0;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    margin: 10px 0 25px;
+}
+
+.service-card p {
+    color: #A9AAA6;
+}
+
+.service-card a {
+    margin-top: auto;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #81D8D0;
+}
+
+.service-card.featured {
+    background: #81D8D0;
+    color: #080808;
+    border-color: #81D8D0;
+}
+
+.service-card.featured p,
+.service-card.featured strong,
+.service-card.featured a {
+    color: #080808;
+}
+
+
+/* TRAVEL BOOKS */
+
+.travel-books {
+    padding: 160px 10%;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(129,216,208,0.10),
+            transparent 35%
+        );
+}
+
+.travel-books > div {
+    max-width: 850px;
+}
+
+.travel-books > div > p:not(.eyebrow) {
+    max-width: 600px;
+    color: #A9AAA6;
+    margin: 35px 0;
+}
+
+
+/* HOW IT WORKS */
+
+.how {
+    padding: 140px 10%;
+    background: #F6F3EC;
+    color: #080808;
+}
+
+.how .eyebrow {
+    color: #168C86;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    margin-top: 100px;
+}
+
+.steps div {
+    border-top: 1px solid rgba(0,0,0,0.25);
+    padding-top: 25px;
+}
+
+.steps span {
+    color: #168C86;
+    font-size: 11px;
+}
+
+.steps h3 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    margin: 20px 0 10px;
+}
+
+.steps p {
+    color: #555;
+}
+
+
+/* FINAL CTA */
+
+.final-cta {
+    min-height: 700px;
+    padding: 140px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.final-cta .button {
+    margin-top: 50px;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 70px 7% 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-logo {
+    font-family: Georgia, serif;
+    font-size: 35px;
+    letter-spacing: 8px;
+    margin-bottom: 10px;
+}
+
+footer > p {
+    color: #A9AAA6;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+    margin: 45px 0;
+}
+
+.footer-links a {
+    font-size: 12px;
+    color: #A9AAA6;
+}
+
+.footer-links a:hover {
+    color: #81D8D0;
+}
+
+.copyright {
+    font-size: 11px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 25px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero {
+        min-height: 80vh;
+        padding: 70px 7%;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .intro,
+    .services,
+    .travel-books,
+    .how,
+    .final-cta {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .benefits,
+    .service-grid,
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .service-card {
+        min-height: 320px;
+    }
+}
